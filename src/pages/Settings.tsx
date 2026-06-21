@@ -171,7 +171,7 @@ export default function SettingsPage() {
                 onChange={(e) => updateSettings({ geminiApiKey: e.target.value })}
               />
               <p className="text-[10px] text-zinc-500">
-                Stored securely in IndexedDB for offline access. If omitted, the server's default key is used.
+                Required for AI features when deployed on static platforms like Netlify. Stored securely in your browser's IndexedDB. Get your free key from Google AI Studio.
               </p>
             </div>
             <div className="pt-4 border-t border-zinc-800/50">
