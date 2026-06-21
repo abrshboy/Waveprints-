@@ -2,10 +2,32 @@ import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
 import {defineConfig} from 'vite';
+import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig(() => {
   return {
-    plugins: [react(), tailwindcss()],
+    plugins: [
+      react(), 
+      tailwindcss(),
+      VitePWA({
+        registerType: 'autoUpdate',
+        manifest: {
+          name: 'Threadline Tracker',
+          short_name: 'Threadline',
+          description: 'Print-on-demand financial tracker',
+          theme_color: '#09090b',
+          background_color: '#09090b',
+          display: 'standalone',
+          icons: [
+            {
+              src: 'pwa-512x512.jpg',
+              sizes: '512x512',
+              type: 'image/jpeg'
+            }
+          ]
+        }
+      })
+    ],
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '.'),
