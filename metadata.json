@@ -1,0 +1,8 @@
+{
+  "name": "Threadline",
+  "description": "Progressive Web App for print-on-demand t-shirt business order and finance tracking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
